@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Gigi Makassar Terpercaya | Angkasa Dental Care</title>
+    
+    <meta name="description" content="Klinik Gigi Makassar terpercaya. Angkasa Dental Care menyediakan layanan scaling, behel, tambal gigi, pencabutan, dan perawatan saluran akar dengan tenaga profesional di area Makassar. Booking sekarang via WhatsApp!">
+    <meta name="keywords" content="Klinik Gigi Makassar, Terapis Gigi Unhas, Angkasa Dental Care">
+    
+
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesia">
+    <meta name="geo.region" content="ID-SN">
+    <meta name="geo.placename" content="Makassar">
+    <meta name="author" content="Angkasa Dental Care">
+    <meta property="og:title" content="Klinik Gigi Makassar | Angkasa Dental Care">
+    <meta property="og:description" content="Layanan perawatan gigi profesional di Makassar. Scaling, behel, tambal gigi dan lainnya.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://angkasa-dental-care.com">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Angkasa Dental Care",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Perintis Kemerdekaan, Tamalanrea",
+            "addressLocality": "Makassar",
+            "addressRegion": "Sulawesi Selatan",
+            "addressCountry": "ID"
+    },
+    "telephone": "+6281242969168",
+    "areaServed": "Makassar",
+    "priceRange": "Rp150000 - Rp6000000",
+    "url": "https://angkasa-dental-care.com"
+}
+</script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0077b6;
+            --secondary: #00b4d8;
+            --dark: #03045e;
+            --light: #caf0f8;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; color: #333; scroll-behavior: smooth; }
+        body.no-scroll { overflow: hidden; height: 100vh; }
+
+        #welcome-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s; 
+            color: white; text-align: center;
+            visibility: visible; opacity: 1;
+        }
+        .welcome-content h1 { font-size: 3.5rem; margin-bottom: 10px; line-height: 1.2; }
+        .welcome-content h1 span { color: var(--light); }
+        .welcome-content p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; font-style: italic; }
+        
+        .btn-start {
+            background: var(--white); color: var(--dark); border: none;
+            padding: 18px 50px; font-size: 1.2rem; font-weight: 700;
+            border-radius: 50px; cursor: pointer; transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            position: relative; z-index: 10001;
+        }
+        .btn-start:hover { transform: scale(1.05); background: var(--light); }
+        .fade-out { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+
+        header {
+            background: var(--white); padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 999;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 15px; font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        .nav-kontak { color: var(--primary) !important; border: 2px solid var(--primary); padding: 5px 15px; border-radius: 20px; }
+
+        #beranda { 
+            width: 100%; height: 550px; overflow: hidden; 
+            position: relative; touch-action: pan-y; 
+        }
+        .slides { 
+            display: flex; width: 300%; height: 100%; 
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .slide { 
+            width: 33.333%; height: 100%; background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            color: white; text-align: center; padding: 20px;
+        }
+        .slide-overlay { background: rgba(0,0,0,0.45); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2); }
+        .slide-overlay h2 { font-size: 2.5rem; }
+
+        .slider-dots {
+            position: absolute; bottom: 20px; left: 50%;
+            transform: translateX(-50%); display: flex; gap: 12px; z-index: 10;
+        }
+        .dot { width: 12px; height: 12px; background: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; transition: 0.3s; }
+        .dot.active { background: white; width: 30px; border-radius: 10px; }
+
+        section { padding: 80px 8%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--dark); margin-bottom: 10px; }
+      
+        .grid-layanan, .grid-team { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card-layanan, .card-team { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; text-align: center; padding-bottom: 20px; transition: 0.3s; }
+        .card-layanan:hover { transform: translateY(-10px); }
+        .img-layanan { width: 100%; height: 180px; background-size: cover; background-position: center; }
+        .img-team { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-top: 20px; border: 4px solid var(--light); }
+        .price { color: #2a9d8f; font-weight: 700; display: block; margin: 10px 0; }
+
+        .container-reservasi { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; }
+        .form-box { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
+        .btn-submit { width: 100%; background: var(--primary); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+
+        footer { background: var(--dark); color: white; padding: 40px 8%; text-align: center; }
+
+        @media (max-width: 768px) {
+            .welcome-content h1 { font-size: 2.2rem; }
+            .container-reservasi { grid-template-columns: 1fr; }
+            #beranda { height: 400px; }
+            .slide-overlay h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body class="no-scroll">
+
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <i class="fas fa-tooth fa-4x" style="margin-bottom: 20px;"></i>
+            <h2>Welcome to <br><span>Angkasa Dental Care</span></h2>
+            <p>Tempat di mana setiap senyuman dirawat sepenuh hati</p>
+            <button type="button" class="btn-start" onclick="startWebsite()">Mulai Jelajahi <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo"><i class="fas fa-hospital-alt"></i> Angkasa Dental</div>
+        <nav>
+            <a href="#profil">PROFIL</a>
+            <a href="#layanan">LAYANAN</a> 
+            <a href="#jadwal">JADWAL</a>
+            <a href="#reservasi">RESERVASI</a>
+            <a href="#tim-klinik">TIM</a>
+            <a href="javascript:void(0)" onclick="contactDirectly()" class="nav-kontak">KONTAK (WA)</a>
+        </nav>
+    </header>
+
+    <div id="beranda">
+        <div class="slides" id="slideTrack">
+            <div class="slide" style="background-image: url('dept-7.jpg')">
+                <div class="slide-overlay"><h2>Senyum Sehat Dimulai dari Sini</h2></div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200')">
+                <div class="slide-overlay"><h2>Dengan Penanganan Profesional</h2></div>
+            </div>
+            <div class="slide" style="background-image: url('bg2.jpeg')">
+                <div class="slide-overlay"><h2>Dalam Standar Klinik Higienis</h2></div>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <div class="dot active" onclick="goToSlide(0)"></div>
+            <div class="dot" onclick="goToSlide(1)"></div>
+            <div class="dot" onclick="goToSlide(2)"></div>
+        </div>
+    </div>
+
+    <section id="profil" style="padding:80px 20px; background:linear-gradient(135deg,#e0f7fa,#ffffff);">
+    
+    <div style="max-width:900px; margin:auto; text-align:center;">
+        
+        <h1 style="font-size:36px; color:#0a2a66;">
+            Klinik Gigi Makassar - Angkasa Dental Care
+        </h1>
+
+        <p style="font-size:18px; line-height:1.8; color:#444; margin-bottom:20px;">
+            Angkasa Dental Care merupakan klinik gigi modern yang mengutamakan kenyamanan, keamanan, dan kepuasan pasien dalam setiap pelayanan. Dengan dukungan tenaga profesional dan peralatan terkini, kami menghadirkan perawatan gigi yang berkualitas dan terpercaya.
+        </p>
+
+        <p style="font-size:18px; line-height:1.8; color:#444;">
+            Kami berkomitmen memberikan pengalaman perawatan yang menyenangkan serta hasil terbaik untuk kesehatan dan estetika senyum Anda. Karena bagi kami, senyum sehat adalah investasi jangka panjang yang berharga.
+        </p>
+
+    </div>
+
+</section>
+
+    <section id="layanan" style="background: var(--gray); padding:60px 20px;">
+    
+    <div class="section-title" style="text-align:center; margin-bottom:40px;">
+        <h2>Layanan Terkait</h2>
+    </div>
+
+    <div class="grid-layanan" 
+         style="display:grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap:30px;
+                max-width:1100px;
+                margin:auto;">
+
+        <div class="card-layanan">
+            <div class="img-layanan" style="height:200px; background-size:cover; background-position:center;
+            background-image:url('scaling\ gigi.jpg.jpeg')"></div>
+            <div style="padding:15px; text-align:center;">
+                <h3>Scaling</h3>
+                <span class="price">Rp 150.000</span>
+            </div>
+        </div>
+
+        <div class="card-layanan">
+            <div class="img-layanan" style="height:200px; background-size:cover; background-position:center;
+            background-image:url('perawatan\ saluran\ akar.jpeg')"></div>
+            <div style="padding:15px; text-align:center;">
+                <h3>Perawatan Saluran Akar</h3>
+                <span class="price">Rp 500.000 - Rp 1.000.000</span>
+            </div>
+        </div>
+
+        <div class="card-layanan">
+            <div class="img-layanan" style="height:200px; background-size:cover; background-position:center;
+            background-image:url('foto\ behel.webp')"></div>
+            <div style="padding:15px; text-align:center;">
+                <h3>Behel</h3>
+                <span class="price">Rp 4.5 - Rp 6jt</span>
+            </div>
+        </div>
+
+        <div class="card-layanan" style="grid-column: 1 / 2;">
+            <div class="img-layanan" style="height:200px; background-size:cover; background-position:center;
+            background-image:url('cabut-gigi.jpeg')"></div>
+            <div style="padding:15px; text-align:center;">
+                <h3>Pencabutan</h3>
+                <span class="price">Rp 200.000</span>
+            </div>
+        </div>
+
+        <div class="card-layanan" style="grid-column: 2 / 3;">
+            <div class="img-layanan" style="height:200px; background-size:cover; background-position:center;
+            background-image:url('foto\ tambal\ gigi.jpeg')"></div>
+            <div style="padding:15px; text-align:center;">
+                <h3>Penambalan</h3>
+                <span class="price">Rp 200.000</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="jadwal">
+        <div class="section-title"><h2>Jadwal & Lokasi</h2></div>
+        <div class="container-reservasi">
+            <div style="background: var(--light); padding: 40px; border-radius: 20px;">
+                <h3><i class="fas fa-clock"></i> Jam Operasional</h3><br>
+                <p><strong>Senin - Jumat:</strong> 09:00 - 20:00 WITA</p>
+                <p><strong>Sabtu:</strong> 10:00 - 17:00 WITA</p>
+                <p><strong>Minggu:</strong> Tutup</p><br>
+                <p><strong>Alamat:</strong> Jl. Perintis Kemerdekaan, Tamalanrea, Makassar (Unhas)</p>
+            </div>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15895.064566373722!2d119.48281146740722!3d-5.133281084260384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefd3731804f3d%3A0x673995818d7f722c!2sUniversitas%20Hasanuddin!5e0!3m2!1sid!2sid!4v1709130000000!5m2!1sid!2sid" 
+                width="100%" height="100%" style="border:0; border-radius:20px; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservasi" style="background: var(--gray);">
+        <div class="section-title"><h2>Reservasi Online</h2></div>
+        <div class="form-box" style="max-width: 600px; margin: 0 auto;">
+            <form onsubmit="sendToWhatsApp(event)">
+                <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                <input type="tel" id="whatsapp" placeholder="No. WhatsApp" required>
+                <select id="layanan-pilih" required>
+                    <option value="">Pilih Layanan</option>
+                    <option value="Scaling">Scaling</option>
+                    <option value="Behel">Behel</option>
+                    <option value="Penambalan">Penambalan</option>
+                    <option value="Pencabutan">Pencabutan</option>
+                </select>
+                <input type="date" id="tanggal" required>
+                <button type="submit" class="btn-submit">Booking Sekarang</button>
+            </form>
+        </div>
+
+        <div id="tim-klinik" class="section-title">
+            <h2 style="margin-top: 50px;">Tim Klinik Angkasa Dental Care</h2>
+        </div>
+        
+        <div class="grid-team">
+    <div class="card-team">
+        <img src="aul.jpeg" class="img-team" alt="Auliyah Mar'ah">
+        <h3>Auliyah Mar'ah</h3>
+        <p>Terapis Gigi</p>
+    </div>
+
+    <div class="card-team">
+        <img src="kasfira.jpeg" class="img-team" alt="Kasfira Kasman">
+        <h3>Kasfira Kasman</h3>
+        <p>Terapis Gigi</p>
+    </div>
+
+    <div class="card-team">
+        <img src="fifit.jpeg" class="img-team" alt="Fifit Elvira Suriono">
+        <h3>Fifit Elvira Suriono</h3>
+        <p>Terapis Gigi</p>
+    </div>
+
+    <div class="card-team">
+        <img src="serly.jpeg" class="img-team" alt="Serly Al Fajriah">
+        <h3>Serly Al Fajriah</h3>
+        <p>Terapis Gigi</p>
+    </div>
+
+    <div class="card-team">
+        <img src="sarina.jpeg" class="img-team" alt="Sarina Amire">
+        <h3>Sarina Amir</h3>
+        <p>Terapis Gigi</p>
+    </div>
+
+    <div class="card-team">
+        <img src="vira.jpeg" class="img-team" alt="Vira Yanti">
+        <h3>Vira Yanti</h3>
+        <p>Terapis Gigi</p>
+    </div>
+
+    <div class="card-team">
+        <img src="yulanda.jpeg" class="img-team" alt="Yulanda">
+        <h3>Yulanda</h3>
+        <p>Terapis Gigi</p>
+    </div>
+
+    <div class="card-team">
+        <img src="evi.jpeg" class="img-team" alt="Evi Tamala - Terapis Gigi Angkasa Dental Care">
+        <h3>Evi Tamala</h3>
+        <p>Terapis Gigi</p>
+    </div>
+</div>
+    </section>
+
+    <section id="testimoni" style="background:#caf0f8; padding:80px 8%;">
+    
+    <div class="section-title" style="text-align:center; margin-bottom:50px;">
+        <h2>Testimoni Pasien</h2>
+        <p style="color:#555;">Apa kata mereka tentang Angkasa Dental Care</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;">
+
+        <!-- Testimoni 1 -->
+        <div style="background:white; padding:30px; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+            <i class="fas fa-quote-left" style="color:#00b4d8; font-size:22px;"></i>
+            <p style="margin:15px 0;">
+                Pelayanannya sangat ramah dan profesional. Scaling di sini tidak sakit dan hasilnya sangat memuaskan!
+            </p>
+            <div style="color:#ffc107; font-size:18px;">
+                ★★★★★
+            </div>
+            <p style="margin-top:10px; font-weight:600;">– Andi Pratama</p>
+        </div>
+
+        <!-- Testimoni 2 -->
+        <div style="background:white; padding:30px; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+            <i class="fas fa-quote-left" style="color:#00b4d8; font-size:22px;"></i>
+            <p style="margin:15px 0;">
+                Dokternya menjelaskan prosedur dengan detail dan sabar. Kliniknya bersih dan nyaman.
+            </p>
+            <div style="color:#ffc107; font-size:18px;">
+                ★★★★☆
+            </div>
+            <p style="margin-top:10px; font-weight:600;">– Siti Rahma</p>
+        </div>
+
+        <!-- Testimoni 3 -->
+        <div style="background:white; padding:30px; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+            <i class="fas fa-quote-left" style="color:#00b4d8; font-size:22px;"></i>
+            <p style="margin:15px 0;">
+                Behel di Angkasa Dental Care harganya terjangkau dan hasilnya rapi. Sangat recommended!
+            </p>
+            <div style="color:#ffc107; font-size:18px;">
+                ★★★★★
+            </div>
+            <p style="margin-top:10px; font-weight:600;">– Muhammad Rizky</p>
+        </div>
+
+    </div>
+</section>
+
+    <footer>
+        <p>©️ 2026 Angkasa Dental Care | Makassar</p>
+        <p><small>Managed by Mahasiswa Terapi Gigi UNHAS</small></p>
+    </footer>
+
+    <script>
+        function startWebsite() {
+            const screen = document.getElementById('welcome-screen');
+            if(screen) {
+                screen.classList.add('fade-out');
+                document.body.classList.remove('no-scroll');
+                setTimeout(() => { screen.style.display = 'none'; }, 800);
+            }
+        }
+
+        let slideIndex = 0;
+        const track = document.getElementById('slideTrack');
+        const dots = document.querySelectorAll('.dot');
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function updateSlider() {
+            track.style.transform = `translateX(${-slideIndex * 33.333}%)`;
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === slideIndex));
+        }
+
+        function goToSlide(n) { slideIndex = n; updateSlider(); resetTimer(); }
+        function nextSlide() { slideIndex = (slideIndex + 1) % 3; updateSlider(); }
+        function prevSlide() { slideIndex = (slideIndex - 1 + 3) % 3; updateSlider(); }
+
+        let slideTimer = setInterval(nextSlide, 5000);
+        function resetTimer() { clearInterval(slideTimer); slideTimer = setInterval(nextSlide, 5000); }
+
+        track.addEventListener('touchstart', e => { 
+            touchStartX = e.touches[0].clientX; 
+            clearInterval(slideTimer); 
+        }, {passive: true});
+
+        track.addEventListener('touchend', e => { 
+            touchEndX = e.changedTouches[0].clientX; 
+            handleSwipe();
+            slideTimer = setInterval(nextSlide, 5000);
+        }, {passive: true});
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchStartX - touchEndX > swipeThreshold) nextSlide();
+            if (touchEndX - touchStartX > swipeThreshold) prevSlide();
+        }
+
+        function contactDirectly() {
+            const adminNumber = "6281200000000"; 
+            const pesan = "Halo Angkasa Dental Care, saya ingin bertanya mengenai layanan klinik.";
+            window.open(`https://wa.me/${adminNumber}?text=${encodeURIComponent(pesan)}`, '_blank');
+        }
+
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            const nama = document.getElementById('nama').value;
+            const wa = document.getElementById('whatsapp').value;
+            const layanan = document.getElementById('layanan-pilih').value;
+            const tgl = document.getElementById('tanggal').value;
+            const adminNumber = "6281200000000"; 
+            const pesan = `Halo Angkasa Dental Care, saya ingin reservasi:%0ANama: ${nama}%0AWA: ${wa}%0ALayanan: ${layanan}%0ATanggal: ${tgl}`;
+            window.open(`https://wa.me/${adminNumber}?text=${pesan}`, '_blank');
+        }
+    </script>
+</body>
+</html>
